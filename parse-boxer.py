@@ -121,12 +121,12 @@ my_boxer = Boxer_()
 
 def drs_parse(e):
 	try:
-		e['hypothesis_logic'] = my_boxer.interpret(' '.join(word_tokenize(sample['hypothesis']))).fol().__str__()
+		e['hypothesis_logic'] = my_boxer.interpret(' '.join(word_tokenize(e['hypothesis']))).fol().__str__()
 	except:
 		e['hypothesis_logic'] = '(x)'
 		print('hypothesis')
 	try:
-		e['premise_logic'] = my_boxer.interpret(' '.join(word_tokenize(sample['premise']))).fol().__str__()
+		e['premise_logic'] = my_boxer.interpret(' '.join(word_tokenize(e['premise']))).fol().__str__()
 	except:
 		e['premise_logic'] = '(x)'
 		print('premise')

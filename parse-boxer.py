@@ -131,10 +131,6 @@ def drs_parse(e):
 	return e
 
 def main():
-	esnli = load_from_disk(opt.dataPath)
-
-	snli_parsed = snli.map(drs_parse)
-
 	raw_data = load_dataset('esnli')[opt.split].shard(opt.shard, opt.index)	
 	snli_parsed = raw_data.map(drs_parse)
 	snli_parsed.save_to_disk(f"{opt.save}/{opt.split}_{opt.shard}_{opt.index}")

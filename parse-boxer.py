@@ -9,7 +9,7 @@ parser.add_argument("--shard", type=int, default=128, help="divide the dataset i
 parser.add_argument("--index", type=int, default=0, help="which partition")
 parser.add_argument("--dataPath", type=str, default='esnli', help='path of files to process')
 parser.add_argument("--save", type=str, default='esnli_boxer', help='path to save processed data')
-parser.add_argument('--shard', action="store_true", help='use DnCNN as reference?')
+# parser.add_argument('--shard', action="store_true", help='use DnCNN as reference?')
 # parser.add_argument("--preprocess", type=bool, default=False, help='run prepare_data or not')
 # parser.add_argument("--lr", type=float, default=1e-3, help="Initial learning rate")
 

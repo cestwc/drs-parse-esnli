@@ -15,6 +15,8 @@ parser.add_argument("--save", type=str, default='esnli_boxer', help='path to sav
 
 opt = parser.parse_args()
 
+from datasets import load_dataset
+
 import nltk
 nltk.download('punkt')
 from nltk.tokenize import word_tokenize
